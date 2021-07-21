@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  <parameter name="userName" value="naveen1612"/>
+  <parameter name="Password" value="AR976T"/>
+  <parameter name="Location" value="Melbourne"/>
+  <parameter name="Hotel" value="Hotel Sunshine"/>
+  <parameter name="Roomtype" value="Double"/>
+  <parameter name="Noofrooms" value="2"/>
+  <parameter name="check-in-date" value="12/07/2021"/>
+  <parameter name="check-out-date" value="14/07/2021"/>
+  <parameter name="Adultsperroom" value="1"/>
+  <parameter name="childrenperroom" value="0"/>
+  <parameter name="firstName" value="Naveen"/>
+  <parameter name="LastName" value="Velusamy"/>
+  <parameter name="Address" value="College of Engineering,Guindy"/>
+  <parameter name="credit card no" value="8148435325503031l"/>
+  <parameter name="cctype" value="VISA"/>
+  <parameter name="expiry month" value="7"/>
+  <parameter name="expiry year" value="2021"/>
+  <parameter name="cvv" value="123"/>
+    <classes>
+      <class name="testng.TestNG1"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
