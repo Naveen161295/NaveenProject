@@ -15,8 +15,8 @@ public class Program extends BaseClassCreation {
 		base.send_Keys(base.find_Element_Locators("id", "room_type"), base.getDataFromExcel("C:\\Users\\Sekar\\eclipse-workspace\\base\\Excel data\\exceldata.xlsx", "Sheet1", 3,5));
 		base.send_Keys(base.find_Element_Locators("id", "room_nos"), base.getDataFromExcel("C:\\Users\\Sekar\\eclipse-workspace\\base\\Excel data\\exceldata.xlsx", "Sheet1", 4, 4));
 		base.send_Keys(base.find_Element_Locators("id", "adult_room"), base.getDataFromExcel("C:\\Users\\Sekar\\eclipse-workspace\\base\\Excel data\\exceldata.xlsx", "Sheet1", 5, 5));
-		base.javaScriptExecutor(1, base.getDataFromExcel("C:\\Users\\Sekar\\eclipse-workspace\\base\\Excel data\\exceldata.xlsx", "Sheet1", 7, 2), base.find_Element_Locators("id", "datepick_in"));
-		base.javaScriptExecutor(1, base.getDataFromExcel("C:\\Users\\Sekar\\eclipse-workspace\\base\\Excel data\\exceldata.xlsx", "Sheet1", 8, 2), base.find_Element_Locators("id", "datepick_out"));
+		base.javaScriptExecutor1(base.getDataFromExcel("C:\\Users\\Sekar\\eclipse-workspace\\base\\Excel data\\exceldata.xlsx", "Sheet1", 7, 2), base.find_Element_Locators("id", "datepick_in"));
+		base.javaScriptExecutor1(base.getDataFromExcel("C:\\Users\\Sekar\\eclipse-workspace\\base\\Excel data\\exceldata.xlsx", "Sheet1", 8, 2), base.find_Element_Locators("id", "datepick_out"));
 		base.send_Keys(base.find_Element_Locators("id", "child_room"), base.getDataFromExcel("C:\\Users\\Sekar\\eclipse-workspace\\base\\Excel data\\exceldata.xlsx", "Sheet1", 6, 2));
 		base.click(base.find_Element_Locators("id", "Submit"));
 		base.click(base.find_Element_Locators("id", "radiobutton_0"));

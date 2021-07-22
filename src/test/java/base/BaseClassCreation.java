@@ -389,33 +389,36 @@ public class BaseClassCreation {
 	
 	
 //JavaScript
-	public void javaScriptExecutor(int i, String data,WebElement element) {
+	public void javaScriptExecutor1(String data,WebElement element) {
 			JavascriptExecutor js=(JavascriptExecutor)driver;
-				if (i==1) {
+				
 					try {
 						js.executeScript("arguments[0].setAttribute('value','"+data+"')", element);
 					}catch (Exception e) {
 				e.printStackTrace();
 			}
-		}
-				else if (i==2) {
-					try {
-						js.executeScript("arguments[0].click()", element);
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
-				}
-				else if (i==3) {
-					try {
-						js.executeScript("arguments[0].getAttribute('value')", element);
-						
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
-					
-				}
-				}
-	
+	}
+	public void javaScriptExecutor2(WebElement element,String method) {
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		try {
+			if(method.equalsIgnoreCase("click")) {
+				js.executeScript("arguments[0].click()", element);
+			}
+			else if (method.equalsIgnoreCase("getattribute")) {
+				js.executeScript("arguments[0].getAttribute('value')", element);
+			}
+			else if (method.equalsIgnoreCase("scrollup")) {
+				js.executeScript("arguments[0].scrollIntoView(false)", element);
+			}
+			else if (method.equalsIgnoreCase("scrolldown")) {
+				js.executeScript("arguments[0].scrollIntoView(true)", element);
+			}
+		} 
+			catch (Exception e) {
+				e.printStackTrace();
+			}
+	}
+		
 //To get a data from excel
 		public String getDataFromExcel(String pathName, String SheetName,int rowNo,int cellNo) {
 			String value=null;
